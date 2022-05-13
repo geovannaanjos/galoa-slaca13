@@ -1,0 +1,796 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;700;900&display=swap');
+/*!
+ * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2022 Fonticons, Inc.
+ */
+ @font-face {
+    font-family: "Font Awesome 6 Free";
+    font-display: block;
+    font-weight: 400;
+    src: url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.ttf") format("truetype"); }
+  
+  @font-face {
+    font-family: "Font Awesome 6 Free";
+    font-display: block;
+    font-weight: 900;
+    src: url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.ttf") format("truetype"); }
+  
+  @font-face {
+    font-family: "Font Awesome 6 Free";
+    font-display: block;
+    font-weight: 400;
+    src: url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.ttf") format("truetype"); }
+
+*{
+    transition: all 0.4s;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #ED7839;
+}
+
+.active {
+    display:block !important;
+}
+
+.inactive {
+    display:none !important;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+p:last-child{
+    margin-bottom:0px;
+}
+
+.padder {
+    padding:0 36px;
+}
+
+#content .block-box{
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #ECECEC;
+    margin: 32px 0px;
+}
+
+#content .block-box h3.block-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    padding: 10px 15px;
+    background-color: #FDF1EB;
+    border-bottom: 1px solid #ECECEC;
+    color: #4E4E4E;
+}
+
+#content .block-box div.block-content {
+    font-family: Quicksand;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+#content .block-box div.block-content span{
+    line-height: 24px;
+}
+
+div#container {
+    display: flex;
+}
+
+#sidebar{
+    width: 220px;
+    overflow-x: hidden;
+    box-shadow: 3px 0 5px 0 #e7e7e7;
+    min-height: 100vh;
+    position: fixed;
+}
+
+#sidebar .menu-close-icon{
+    display:none;
+}
+
+#sidebar #event-name,
+#content header #event-name-mobile{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 78px;
+    letter-spacing: 0em;
+    color: #fff;
+    background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+}
+
+#sidebar ul#sidebar-menu li{
+    border-bottom: 2px solid #E7E7E7;
+}
+
+#sidebar ul#sidebar-menu li a{
+    color: #725C5C;
+    text-decoration: none;
+    line-height: 33px;
+    padding-left: 24px;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    display: block;
+}
+
+#sidebar ul#sidebar-menu li.active, #sidebar ul#sidebar-menu li:hover{
+    background-color: #FDF1EB;
+}
+
+#sidebar ul#sidebar-menu li.active:before, #sidebar ul#sidebar-menu li:hover:before{
+    content:"";
+    width:5px;
+    height:33px;
+    background: linear-gradient(180deg, #FFB455 0%, #ED7839 100%);
+    float:left;
+}
+
+#sidebar ul#sidebar-menu li.active a, #sidebar ul#sidebar-menu li:hover a{
+    padding-left:29px;
+}
+
+#container.show-menu {
+    overflow-x: hidden;
+}
+
+#content {
+    width: 100%;
+    margin-left: 220px;
+}
+
+#content header{
+    height: 78px;
+    background-color: #FDF1EB;
+    padding: 4px 0px;
+}
+
+#content header #event-name-mobile{
+    display:none
+}
+
+#content header .padder {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#content header #welcome {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    position: relative;
+}
+#content header #welcome #languages {
+    margin-right: 24px;
+}
+
+#content header #welcome #languages .dropdown{
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    color: #000;
+    padding: 6px 10px;
+}
+
+#content header #welcome #languages .dropdown a#languages-select{
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#content header #welcome #languages .dropdown a#languages-select span.fa {
+    margin-right: 7px;
+}
+
+#content header #welcome #user-data {
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: right;
+    margin-right: 8px;
+}
+
+#content header #welcome #user-data #user-email {
+    font-size:12px;
+}
+
+#content header #welcome #user-avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#content header #welcome #user-avatar::before {
+    content: "2";
+    border-radius: 20px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: -0.02em;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    right: -1px;
+    margin-top: -2px;
+}
+
+#content header #welcome #user-avatar img {
+    width: 100%;
+}
+
+#content h2, #content h3, #content h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #725C5C;
+    margin-bottom: 0;
+}
+
+#content h2{
+    font-size: 22px;
+    line-height: 26px;
+}
+
+
+#content #body .top-work-blocks {
+    display: flex;
+    align-content: stretch;
+}
+
+#content #body .top-work-blocks .top-left-work-block {
+    width: 100%;
+    padding-right: 40px;
+}
+
+#content #body .top-work-blocks .top-left-work-block .main-title {
+    color: #ED7839;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    height: 94px;
+    display: flex;
+    align-items: center;
+}
+
+#content #body .top-work-blocks .top-right-work-block .top-right-work-actions{
+    height:108px;
+}
+
+#content #body .top-work-blocks .top-right-work-block {
+    width: 286px;
+    display: flex;
+    flex-direction: column;
+}
+
+#content #body .top-work-blocks .top-right-work-block .buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin: 18px 0;
+    margin-bottom: 12px;
+}
+
+#content #body .top-work-blocks .top-right-work-block .buttons > div button{
+    background-color: #ED7839;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 6px;
+    padding: 2px 13px;
+}
+
+#content #body .top-work-blocks .top-right-work-block .buttons .doiButton button{
+    margin-right: 0px;
+}
+
+#content #body .top-work-blocks .top-right-work-block .citar {
+    color: #ED7839;
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    
+}
+
+#content #body .top-work-blocks .top-right-work-block .details {
+    color: #5C5C5C;
+    border-radius: 3px 3px 0px 0px;
+    font-size: 20px;
+    height: 100%;
+}
+#content #body .top-work-blocks .top-right-work-block div.details.block-box{
+    margin: 0;
+}
+
+#content #body .top-work-blocks .top-right-work-block .details div.block-content{
+    overflow: hidden scroll;
+    padding: 10px 0px 2px 15px;
+    height: CALC(100% - 46px);
+}
+
+#content #body .top-work-blocks .top-right-work-block .details div.block-content .block-content-scroll{
+    position: absolute;
+    width: 200px;
+}
+
+#content #body .top-work-blocks .top-right-work-block .details div.block-content .block-content-scroll .authors {
+    margin: 20px 0 36px;
+}
+
+#content #body .top-work-blocks .top-right-work-block .details div.block-content .block-content-scroll .top-details {
+    font-size: 12px;
+}
+
+#content #body .top-work-blocks .top-right-work-block .details div.block-content .block-content-scroll .bottom-details {
+    font-size: 12px;
+    color: #725C5C;
+}
+
+#content #body div.summary.block-box div.block-content span.read-more{
+    font-weight:700;
+    color: #ED7839;
+    cursor: pointer;
+}
+
+#content #body div.summary.block-box div.block-content span.full-text{
+    display:none;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas{
+    text-align: center;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas b,
+#content #body div.discussions.block-box .block-content #share-ideas-sent > b{
+    text-align: center;
+    color: #ED7839;
+    font-size: 18px;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas .icons{
+    padding: 34px;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas .icons svg{
+    margin: 0px 20px;
+}
+
+
+#content #body div.discussions.block-box .block-content #share-ideas > p{
+    margin-bottom: 42px;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas hr{
+    border:  1px solid #E7E7E7;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas a.btn-share-ideas,
+#content #body div.discussions.block-box .block-content #share-ideas-sent a.btn-share-ideas-new {
+    position: absolute;
+    height: 32px;
+    left: CALC( 50% - 66px );
+    width: 133px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+    box-shadow: 0px 1px 2px rgba(100, 100, 100, 0.7);
+    margin: -16px auto 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    z-index: 1;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas a.btn-share-ideas .more-icon {
+    width: 3px;
+    background-color: #fff;
+    height: 17px;
+    display: block;
+    margin: 7px 0px 0px 19px;
+    float: left;
+    font-size: 15px;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas a.btn-share-ideas .more-icon:before {
+    content: '';
+    display: block;
+    background-color: #fff;
+    width: 17px;
+    height: 3px;
+    margin: 7px 0 0 -7px;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas,
+#content #body div.discussions.block-box .block-content #share-ideas-form,
+#content #body div.discussions.block-box .block-content #share-ideas-sent,
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box.waiting-approval {
+    display: none;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas.active,
+#content #body div.discussions.block-box .block-content #share-ideas-form.active,
+#content #body div.discussions.block-box .block-content #share-ideas-sent.active,
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box.waiting-approval.active {
+    display: block;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-form > p,
+#content #body div.discussions.block-box .block-content #share-ideas-form > p {
+    text-align: center;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-form label {
+    color: #ED7839;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 10px;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-form input#assunto {
+    width: 100%;
+    padding: 6px 8px;
+    margin-top: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-form #ideas-editor {
+    border: 1px solid #CCCCCC;
+}
+
+
+#content #body div.discussions.block-box .block-content #share-ideas-form #ideas-editor #ideas-textbox {
+    width: 100%;
+    height: 82px;
+    padding: 12px;
+    margin-top: 5px;
+    overflow-y: scroll;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-form #ideas-editor .send-ideas {
+    background-color: #EAF1F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #CCCCCC;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-form #ideas-editor .send-ideas img {
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-form #ideas-editor .send-ideas button {
+    height: 32px;
+    width: 205px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    border: 0;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-form #ideas-editor .send-ideas img:hover{
+    background-color: #dedede;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-sent > b,
+#content #body div.discussions.block-box .block-content #share-ideas-sent > p {
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-sent > p.share-ideas-sent-link{
+    margin: 30px 0 60px;
+}
+
+#content #body div.discussions.block-box .block-content #share-ideas-sent a.btn-share-ideas-new {
+    width: 240px;
+    text-align: center;
+    left: CALC( 50% - 120px );
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box{
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px rgba(130, 130, 130, 0.2);
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .question-padder{
+    padding: 18px 23px;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .question-padder > b {
+    color: #ED7839;
+    font-size: 16px;
+    margin-bottom: 2px;
+    display: block;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box.waiting-approval div.question-padder {
+    filter: blur(6px);
+    background-color: #eee;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box.waiting-approval .waiting-approval-text {
+    margin-top: -94px;
+    z-index: 9;
+    position: relative;
+    text-align: center;
+    color: #707070;
+}
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box.waiting-approval .waiting-approval-text span{
+    font-size:18px;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box.waiting-approval .waiting-approval-text p{
+    font-size:16px;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .actions {
+    margin-top: 6px;
+    display: flex;
+    cursor: pointer;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .actions > span {
+    margin-right: 16px;
+    color: #757575;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .actions .more-actions{
+    line-height: 32px;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .actions .more-actions i{
+    color: #ED7839;
+    font-size: 22px;
+}
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .actions .heart-box {
+    background-color: #ED7839;
+    padding: 2px 4px 2px 7px;
+    color: #fff;
+    font-size: 13px;
+    box-shadow: 1px 2px 6px rgba(130, 130, 130, 0.2);
+    margin-right: 16px;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers{
+    display:none;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers .answer-box {
+    width: 100%;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers .answer-box {
+    padding: 18px 23px;
+    border-top: 1px solid #E7E7E7;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers .answer-box.is-author {
+    background-color: #F8F8F8;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers .answer-box h5,
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .question-padder h5.author {
+    font-size:12px;
+    font-weight:700;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers .answer-box h5 .author-title {
+    float: right;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ED7839;
+    width: 87px;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers .answer-box h5 .author-title i {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ED7839;
+    float: right;
+    margin-top: -3px;
+}
+
+#content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers .answer-box .answer p:last-child {
+    margin-bottom:0px;
+}
+
+#content footer {
+    margin: 50px 0;
+}
+
+#content footer .padder .footer-content {
+    display: flex;
+    align-items: center;
+    border-top:  1px solid #E7E7E7;
+    padding-top: 14px;
+    font-family: Quicksand;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#content footer .padder .galoa{
+    width:200px;
+    margin-right:30px;
+}
+
+#content footer .padder .galoa .btn-learn-more {
+    background-color: #71478E;
+    color: #fff;
+    border: 0;
+    border-radius: 7px;
+    margin-right: 6px;
+    padding: 5px 13px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: 'Quicksand';
+    font-size: 14px;
+}
+
+@media screen and (max-width: 980px) {
+    #sidebar{
+        margin-left: -220px;
+    }
+    #sidebar .menu-close-icon {
+        position: absolute;
+        display: block;
+        padding: 9px 12px;
+        right: 0;
+    }
+    #sidebar #event-name{
+        display: none;
+    }
+    #content {
+        margin-left: 0px;
+    }
+    #container.show-menu #sidebar{
+        margin-left: 0px;
+    }
+    #container.show-menu #content{
+        margin-left: 220px;
+        filter: blur(2px);
+    }
+
+    #content header,
+    #content #body .top-work-blocks .top-left-work-block .main-title{
+        height: auto;
+    }
+
+    #content header #title > *{
+        margin:15px 0px !important;
+        line-height: normal;
+    }
+
+    #content #body .top-work-blocks .top-left-work-block {
+        padding:0px;
+    }
+
+    #content #body .top-work-blocks .top-left-work-block .main-title{
+        padding:16px 0;
+    }
+
+    #content #body .top-work-blocks .top-right-work-block{
+        width: 100%;
+    }
+
+    #content #body .top-work-blocks .top-right-work-block .details div.block-content{
+        overflow: initial;
+        padding: 10px 15px;
+    }
+
+    #content #body .top-work-blocks .top-right-work-block .details div.block-content .block-content-scroll {
+        position: initial;
+    }
+
+    #content #body div.discussions.block-box .block-content #share-ideas .icons{
+        padding: 14px 0px;
+    }
+
+    #content #body div.discussions.block-box .block-content #share-ideas .icons svg{
+        margin: 0 6px;
+    }
+
+    #content header #event-name-mobile{
+        display: block;
+    }
+
+    #content header #event-name-mobile .padder {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #content header #event-name-mobile .menu-open-icon {
+        float: left;
+        font-size: 20px;
+    }
+
+    #content header #welcome #user-data {
+        display: none;
+    }
+
+    #content header #welcome{
+        justify-content: flex-end;
+        margin-top: -40px;
+    }
+
+    #content header #welcome #languages{
+        margin-right:4px;
+    }
+
+    #content #body div.discussions.block-box .block-content .discussion-questions .question-box .actions > span {
+        margin-right: 8px;
+    }
+
+    #content #body div.discussions.block-box .block-content .discussion-questions .question-box .answers .answer-box h5 .author-title {
+        display: block;
+        float: none;
+    }
+
+    #content footer .padder .footer-content,
+    #content header .padder,
+    #content #body .top-work-blocks  {
+        flex-direction: column;
+    }
+
+    #content footer .padder .footer-content > div  {
+        width:100% !important;
+        display:block;
+        margin:14px 0;
+    }
+}
