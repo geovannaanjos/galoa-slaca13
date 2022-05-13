@@ -30,6 +30,9 @@ const formShareIdeas = document.querySelector('#share-ideas-form');
 const btnFormShareIdeas = document.querySelector('#share-ideas-form button');
 const sentShareIdeas = document.querySelector('#share-ideas-sent');
 const btnSentShareIdeas = document.querySelector('#share-ideas-sent .btn-share-ideas-new');
+const waitingApproval = document.querySelector('.question-box.waiting-approval');
+const btnEditComment = document.querySelector('.edit-comment');
+
 
 btnShareIdeas.onclick = function() {
   shareIdeas.classList.add('inactive');
@@ -40,9 +43,18 @@ btnFormShareIdeas.onclick = function() {
   formShareIdeas.classList.add('inactive');
   sentShareIdeas.classList.add('active');
   sentShareIdeas.classList.remove('inactive');
+  waitingApproval.classList.add('active');
+  waitingApproval.classList.remove('inactive');
 }
 
 btnSentShareIdeas.onclick = function() {
+  sentShareIdeas.classList.add('inactive');
+  formShareIdeas.classList.add('active');
+  formShareIdeas.classList.remove('inactive');
+}
+
+btnEditComment.onclick = function() {
+  waitingApproval.classList.remove('active');
   sentShareIdeas.classList.add('inactive');
   formShareIdeas.classList.add('active');
   formShareIdeas.classList.remove('inactive');
